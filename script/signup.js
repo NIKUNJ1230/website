@@ -1,16 +1,17 @@
-let user = JSON.parse(localStorage.getItem("user")) || [];
+import nav from "../components/Nav.js";
 
-document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  let user = {
+    name: document.getElementById("name").value,
+    password: document.getElementById("password").value,
+    cpassword: document.getElementById("cpassword").value,
+    number: document.getElementById("number").value,
+    email:document.getElementById("email").value
+  };
 
-  let data = {
-    email : document.getElementById("email").value,
-    password : document.getElementById("password").value,
-    cpassword : document.getElementById("cpassword").value
-  }
-  console.log(data);
-
-  user.push(data)
+  localStorage.setItem("user", JSON.stringify(user));
   console.log(user);
-  localStorage.setItem(("user"),JSON.stringify(user));
 });
+
+document.getElementById("nav").innerHTML=nav()
