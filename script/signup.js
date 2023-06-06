@@ -1,17 +1,15 @@
-import nav from "../components/Nav.js";
+import nav from "../components/nav.js";
 
-document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  let user = {
-    name: document.getElementById("name").value,
-    password: document.getElementById("password").value,
-    cpassword: document.getElementById("cpassword").value,
-    number: document.getElementById("number").value,
-    email:document.getElementById("email").value
-  };
-
-  localStorage.setItem("user", JSON.stringify(user));
-  console.log(user);
-});
-
-document.getElementById("nav").innerHTML=nav()
+document.getElementById("nav").innerHTML=nav();
+document.querySelector("form").addEventListener("submit", function(event){
+    event.preventDefault();
+    let user={
+    name : document.getElementById("name").Value,
+    email : document.getElementById("email").Value,
+    password : document.getElementById("password").Value,
+    cpassword : document.getElementById("cpassword").Value,
+    number : document.getElementById("number").Value,
+    };
+    localStorage.setItem("user", JSON.stringify(user));
+    console.log(user);
+})
