@@ -8,11 +8,11 @@ document.querySelector("form").addEventListener("submit", function(event){
     let email = document.getElementById("email").Value;
     let password = document.getElementById("password").Value;
 
-    if(email== user.email && password== user.password){
-        alert("Please enter");
-        window.location.href="../website.html";
-    }
-    else{
-        alert("Invalid email");
-    }
+    // if(email == user.email && password == user.password){
+    //     alert("Please enter");
+    //     window.location.href="../index.html";
+    // }
+    // else{
+    //     alert("Invalid email");
+    // }
 })  

@@ -3,6 +3,7 @@ form#form {
     flex-direction: column;
     width: 25%;
     margin: 0 auto;
+    padding-top: 70px;
 }
 .input-tag {
     margin: 10px;
